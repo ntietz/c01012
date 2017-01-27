@@ -34,7 +34,8 @@
 <body>
 
   <div class="container">
-    <div class="page-header C01012" id="C01012">
+    <a name="top"></a>
+    <div class="page-header C01012">
       <h1>#C01012 - for when your anchors and colors must match</h1>
 
     </div>
@@ -43,16 +44,23 @@
 
       <div class="dropdown">
         <button class="btn btn-default dropdown-toggle" type="button" id="color-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Color List <span class="caret"></span>
+          Jump to a Color <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu" aria-labelledby="color-menu">
-          <li><a href="#">Color 1</a></li>
+        <ul class="dropdown-menu" aria-labelledby="color-menu" id="color-dropdown">
         </ul>
+      </div>
+
+      <div class="button">
+        <button class="btn btn-default" type="button" onClick="jumpToRandom()">
+          Random Color
+        </button>
       </div>
 
 
     </div>
   </div>
+
+  <div id="color-blocks"></div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -60,7 +68,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   <script src="js/data.js"></script>
-  <script src="js/main.js">
+  <script src="js/main.js"></script>
+  <script>
+    addColorsToList(document.getElementById("color-dropdown"));
+    addColorSectionsToPage(document.getElementById("color-blocks"));
   </script>
 
 </body>
