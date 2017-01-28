@@ -51,6 +51,6 @@ with open('/etc/dictionaries-common/words') as dictionary:
         'color': color
       })
 
-with open('www/js/data.js', 'w') as out:
+with open('js/data.js', 'w') as out:
   out.write('const words = %s' % json.dumps(words))
 
