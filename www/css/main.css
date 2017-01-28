@@ -1,5 +1,18 @@
 
+body {
+  background-color: #D3D3D3;
+}
+
+h1 {
+  text-align: center;
+}
+
 .C01012 {
   color: #C01012;
+}
+
+.jumbotron {
+  border-radius: 15px;
+  text-align: center;
 }
 
